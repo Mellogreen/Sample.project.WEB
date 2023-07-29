@@ -49,3 +49,47 @@
             console.log(`My name a ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`)
 
 
+//==============================================================================================
+
+// SIMPLE EIGHT BALL PROJECT
+        
+        
+        let userName = "Adeniyi";
+        let userQuestion = "Do i need a break?";
+        let randomNumber = "";
+        let eightBall = "";
+    
+        // Using teneary statement to check the logged user name
+        userName ? console.log(`Hello, ${userName}`):console.log('Hello')
+
+        //using teneary statement to check the and log the userquestion 
+        userQuestion ? console.log(`The question asked is: ${userQuestion}`):
+        console.log('What is your user name ?')
+
+        //using this code to create a number between 0 and 8 and using math.floor to round it up to a whole number
+        randomNumber = Math.floor(Math.random() * 8);
+        // console.log(randomNumber)
+
+
+        switch (randomNumber){
+        case 0 : console.log('It is certain');
+        break;
+        case 1 :
+        console.log ('It is decidedly so');
+        break;
+        case 2 :
+        console.log ('Reply hazy try again');
+        break;
+        case 3 : console.log ('Cannot predict now');
+        break;
+        case 4 : console.log('Do not count on it');
+        break;
+        case 5 : console.log('My sources say no');
+        break;
+        case 6 : console.log('Outlook not so good');
+        break;
+        case 7 : console.log('Signs point to yes');
+        break;
+        default : console.log('no information')
+        break;
+        }
