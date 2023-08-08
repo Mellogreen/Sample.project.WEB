@@ -70,7 +70,7 @@
         randomNumber = Math.floor(Math.random() * 8);
         // console.log(randomNumber)
 
-
+        //Using switch statement to create multiple scenerios for each case at random number.
         switch (randomNumber){
         case 0 : console.log('It is certain');
         break;
@@ -93,3 +93,105 @@
         default : console.log('no information')
         break;
         }
+
+        //======================================================================
+
+        //Race Day Concept to allocate number
+
+        let raceNumber = Math.floor(Math.random() * 1000);
+        let raceRegistration = true;
+        let runnerAge = 19;
+
+        if( raceRegistration === true  && runnerAge > 18){
+        console.log(raceNumber = raceNumber + 1000)
+        }
+
+        if( runnerAge > 18 && raceNumber >= 1000 ){
+        console.log(`An adult with registration number ${raceNumber} will run at 9:30 a.m`)
+        }
+        else if(runnerAge > 18 && raceNumber < 1000 ){
+        console.log(`An adult with registration number ${raceNumber} will run at 11:00 a.m`)
+        }
+        else if (runnerAge < 18){
+        console.log(`Youth with registration number ${raceNumber} will run at 12:30 p.m`)
+        }
+        else{
+        console.log(`Young adult with registration number ${raceNumber} will be run at 12:30p.m`)
+        }
+
+        //==========================================================================================
+        //LOOPING THORUGH A NESTED LOOP AND PUSHINH IT INTO A NEW EMPTY ARRAY
+
+        let bobsFollowers = ['Mankind','Tony','Segun','Kenny'];
+        let tinasFollowers = ['Mankind','Ahmed','Kenny'];
+        let mutualFollowers = [];
+        let mutual = '';
+
+        for(let i = 0; i < bobsFollowers.length; i++){
+        for(let t = 0; t < tinasFollowers.length; t++ ){
+        if( bobsFollowers[i] === tinasFollowers[t] ){
+        mutual = mutual + tinasFollowers[t];
+
+        mutualFollowers.push(tinasFollowers[t])
+        }
+        }
+        }
+        console.log(mutual)
+
+        //=====================================================================
+          //SIMPLES CONCEPT OF DECONSTRUCTING AN OBJECT OF AN ARRAY (i.e an array wrapped in an object)
+        const blog = {
+                title: 'My First Space Travel Blog',
+                author: {
+                  firstNamer: 'Rick',
+                  lastNamer: 'Sanchez',
+                },
+                tags: ['ideas', 'notes', 'inter dimensional travel'],
+              }
+              
+              const {
+                title,
+                author: {firstNamer, lastNamer},
+                tags: [ideaTag, noteTag, interTag]
+              } = blog
+              
+              console.log(blog)
+              
+
+              //=========================================================================
+             // A SIMPLE CONCEPT OF DESTRUCTURING AN ARRAY OF OBJECT(i.e an object wrapped in an array )
+              var friends = [
+                  {
+                      name: 'Rick',
+                      color: 'blue'
+                  },
+                  {
+                      name: "Morty",
+                      color: 'yellow'
+                  }
+              ];
+
+              //=====================================
+              //METHOD OF DESTRUCTING BEFORE THE ADVENT OF ES6
+              const firstColor = friends[0].color;
+              const firstName = friends[0].name;
+              const secondColor = friends[1].color;
+              const secondName = friends[1].name;
+              
+              console.log(firstColor, secondName)
+              //=================================
+              //ANOTHER WAY OF DESTRUCTING
+              let [color1 , color2] = [friends[0].color, friends[1].color];
+              let [name1, name2] = [friends[0].name, friends[1].name]
+              console.log(name1, color2)
+              
+              //=============================
+              // ES 6 CONCEPT
+              let [{color:firstColors} , {color:secondColors}] = friends;
+              let [{name:firstNames} , {name:secondNames}] = friends;
+              console.log(firstNames, firstColors)
+              console.log(secondNames, secondColors)
+
+              //need to start new hands on project
+              
+
